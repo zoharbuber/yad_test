@@ -1,4 +1,4 @@
- from bs4 import BeautifulSoup as bs
+from bs4 import BeautifulSoup as bs
 import requests
 from Advertisement import Advertisement
 
