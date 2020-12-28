@@ -1,4 +1,3 @@
-from Advertisement import Advertisement
 from scraper import Scraper
 from advertisement_dao import AdvertisementDAO
 

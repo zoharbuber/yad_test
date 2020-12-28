@@ -1,6 +1,5 @@
 import sqlite3
-from yad2_query import create_table, select_query, insert_query
-from Advertisement import Advertisement
+from yad2_query import insert_query
 
 
 class AdvertisementDAO:
@@ -10,7 +9,7 @@ class AdvertisementDAO:
         self.cursor.execute('''
         CREATE TABLE IF NOT EXISTS Advertisement (
             streets text,
-            prices text,
+            prices int,
             apartment_types text,
             cities text,
             areas text,
@@ -20,6 +19,5 @@ class AdvertisementDAO:
 
     def insert_advertisements(self, advertisements):
         for advertisement in advertisements:
-            self.cursor.execute(insert_query, [advertisement.price])
+            self.cursor.execute(insert_query, [advertisement.street, advertisement.price, advertisement.apartment_type, advertisement.city, advertisement.area, advertisement.secondary_area])
             self.conn.commit()
-
