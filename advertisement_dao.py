@@ -1,5 +1,5 @@
 import sqlite3
-from yad2_query import insert_query
+from yad2_query import insert_query, select_query
 
 
 class AdvertisementDAO:
@@ -21,3 +21,4 @@ class AdvertisementDAO:
         for advertisement in advertisements:
             self.cursor.execute(insert_query, [advertisement.street, advertisement.price, advertisement.apartment_type, advertisement.city, advertisement.area, advertisement.secondary_area])
             self.conn.commit()
+
