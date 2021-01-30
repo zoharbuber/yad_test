@@ -5,9 +5,9 @@ from user_dao import UserDao
 
 class Bot:
     def __init__(self):
-        self.token = '1570865930:AAFQNWHJW-s4JQVk7G13SbOUMdBhcB_Kkcc'
-        self.bot_user_name = 'yad2_zohar_bot'
-        self.bot_name = 'yad2_zohar'
+        self.token = ''
+        self.bot_user_name = ''
+        self.bot_name = ''
         self.updater = Updater(self.token, use_context=True)
         self.user_operations = UserOperaetions()
         self.user_dao = UserDao()
